@@ -1,0 +1,759 @@
+{
+	"info": {
+		"_postman_id": "ee47cd99-2cac-4c22-9af5-5b28a5106688",
+		"name": "HW_7_Yuriev_Yevhen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48972507",
+		"_collection_link": "https://zhuyuriev-5454368.postman.co/workspace/Zhu-Yuriev's-Workspace~74ee8e60-7941-47c2-8072-d6aeb3ac3eff/collection/48972507-ee47cd99-2cac-4c22-9af5-5b28a5106688?action=share&source=collection_link&creator=48972507"
+	},
+	"item": [
+		{
+			"name": "Greeting Basic",
+			"item": [
+				{
+					"name": "Greeting Basic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/greeting",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"greeting"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Greeting Basic with param",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/greeting?name=people",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"greeting"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "people"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Greeting Basic with wrong method",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/greeting",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"greeting"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Custom-Greeting",
+			"item": [
+				{
+					"name": "Custom-Greeting",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/custom-greeting",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"custom-greeting"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Custom-Greeting with fist param",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/custom-greeting?firstPerson=people",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"custom-greeting"
+									],
+									"query": [
+										{
+											"key": "firstPerson",
+											"value": "people"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Custom-Greeting with second param",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/custom-greeting?secondPerson=person",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"custom-greeting"
+									],
+									"query": [
+										{
+											"key": "secondPerson",
+											"value": "person"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Custom-Greeting with both param",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/custom-greeting?firstPerson=people&secondPerson=person",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"custom-greeting"
+									],
+									"query": [
+										{
+											"key": "firstPerson",
+											"value": "people"
+										},
+										{
+											"key": "secondPerson",
+											"value": "person"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Custom-Greeting with wrong method",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/custom-greeting",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"custom-greeting"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Allow",
+									"value": "GET"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Oct 2025 00:21:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2025-10-27T00:21:13.125+00:00\",\n    \"status\": 405,\n    \"error\": \"Method Not Allowed\",\n    \"path\": \"/custom-greeting\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Current Datetime",
+			"item": [
+				{
+					"name": "Current Datetime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/current-datetime",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"current-datetime"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Current Datetime with wrong method",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/current-datetime",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"current-datetime"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Current Datetime with wrong endpoint",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/current-date",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"current-date"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Delete Service",
+			"item": [
+				{
+					"name": "Delete_Service equivalent values",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/delete/{id}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"delete",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete valid value",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete/4",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete",
+										"4"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delete invalid value",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete/-10",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete",
+										"-10"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delete invalid value",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delete without value",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delete with latter",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete/abc123",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete",
+										"abc123"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delelte_Service border",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/delete/{id}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"delete",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delelte_Service border valid",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delelte_Service border valid",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete/2",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delelte_Service border valid",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete/8",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete",
+										"8"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delelte_Service border valid",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete/9",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete",
+										"9"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delelte_Service border invalid",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete/0",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete",
+										"0"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delelte_Service border invalid",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/delete/10",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"delete",
+										"10"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Random Number",
+			"item": [
+				{
+					"name": "Random Number Default",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/random-numbers",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"random-numbers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Random Number with first param",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/random-numbers?count=3",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"random-numbers"
+									],
+									"query": [
+										{
+											"key": "count",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Random Number with second param",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/random-numbers?min=-10",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"random-numbers"
+									],
+									"query": [
+										{
+											"key": "min",
+											"value": "-10"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Random Number with third param",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/random-numbers?max=10",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"random-numbers"
+									],
+									"query": [
+										{
+											"key": "max",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Random Number with all param",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/random-numbers?min=-10&max=10&count=3",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"random-numbers"
+									],
+									"query": [
+										{
+											"key": "min",
+											"value": "-10"
+										},
+										{
+											"key": "max",
+											"value": "10"
+										},
+										{
+											"key": "count",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Random Number with count>20",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/random-numbers?count=20",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"random-numbers"
+									],
+									"query": [
+										{
+											"key": "count",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://api.tallinn-learning.ee:4455",
+			"type": "string"
+		}
+	]
+}

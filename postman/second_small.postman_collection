@@ -1,0 +1,477 @@
+{
+	"info": {
+		"_postman_id": "8014f371-4431-4e5b-aa1c-abfb3136a298",
+		"name": "HW_8_Yuriev_Yevhen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48972507",
+		"_collection_link": "https://zhuyuriev-5454368.postman.co/workspace/Zhu-Yuriev's-Workspace~74ee8e60-7941-47c2-8072-d6aeb3ac3eff/collection/48972507-8014f371-4431-4e5b-aa1c-abfb3136a298?action=share&source=collection_link&creator=48972507"
+	},
+	"item": [
+		{
+			"name": "GET an order",
+			"item": [
+				{
+					"name": "Get an order equivalent values",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/test-orders/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"test-orders",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get an order no valid value LESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/-5",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"-5"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Get an order no valid value MORE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/30",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"30"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get an order border",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/test-orders/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"test-orders",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get an order valid value",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/2",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Get an order valid value",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/9",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"9"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Get an order valid value",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/10",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"10"
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						},
+						{
+							"name": "Get an order invalid value",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/0",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"0"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Get an order invalid value",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/11",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"11"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get an order error guessing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/test-orders/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"test-orders",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get an order with symbol",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/@@@@",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"@@@@"
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						},
+						{
+							"name": "Get an order with latters",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/abc",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"abc"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Get an order wrong method",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Delete order",
+			"item": [
+				{
+					"name": "Delete valid id order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/test-orders/1?api_key=eKsDmJCctwAmnesq",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"test-orders",
+								"1"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "eKsDmJCctwAmnesq"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete invalid id order",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "api_key",
+										"value": "eKsDmJCctwAmnesq",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/0?api_key=eKsDmJCctwAmnesq",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"0"
+									],
+									"query": [
+										{
+											"key": "api_key",
+											"value": "eKsDmJCctwAmnesq"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Delete valid id order",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login to get API",
+			"item": [
+				{
+					"name": "Login with valid name and pass",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/test-orders?username=people&password=person",
+							"path": [
+								"test-orders"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "people"
+								},
+								{
+									"key": "password",
+									"value": "person"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login without name and pass",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/test-orders",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"test-orders"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "people",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "person",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://backend.tallinn-learning.ee"
+		}
+	]
+}

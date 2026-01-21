@@ -1,0 +1,1082 @@
+{
+	"info": {
+		"_postman_id": "0814e07e-63de-4687-a3e1-cfdd0847d969",
+		"name": "HW_21_Yuriev_Yevhen (COURIER)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48972507",
+		"_collection_link": "https://zhuyuriev-5454368.postman.co/workspace/Zhu-Yuriev's-Workspace~74ee8e60-7941-47c2-8072-d6aeb3ac3eff/collection/48972507-0814e07e-63de-4687-a3e1-cfdd0847d969?action=share&source=collection_link&creator=48972507"
+	},
+	"item": [
+		{
+			"name": "Real Operations",
+			"item": [
+				{
+					"name": "By {ID}",
+					"item": [
+						{
+							"name": "Change order status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"OPEN\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/orders/:id/status",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"orders",
+										":id",
+										"status"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "string",
+											"description": "path id number"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful operation",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"status\": \"ACCEPTED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/orders/:id/status",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"orders",
+												":id",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "13579",
+													"description": "path id number"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 06 Dec 2025 14:24:52 GMT"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"ACCEPTED\",\n    \"courierId\": 2864,\n    \"customerName\": \"Yevhen\",\n    \"customerPhone\": \"55661122\",\n    \"comment\": \"testing\",\n    \"id\": 13579\n}"
+								},
+								{
+									"name": "Wrong courier",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"status\": \"ACCEPTED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/orders/:id/status",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"orders",
+												":id",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "13579",
+													"description": "path id number"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Length",
+											"value": "57"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 06 Dec 2025 14:06:16 GMT"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										}
+									],
+									"cookie": [],
+									"body": "Can't set status ACCEPTED for order 13579 by courier 2864"
+								},
+								{
+									"name": "Wrong sequence",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"status\": \"DELIVERED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/orders/:id/status",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"orders",
+												":id",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "13579",
+													"description": "path id number"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 06 Dec 2025 14:26:25 GMT"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"DELIVERED\",\n    \"courierId\": 2864,\n    \"customerName\": \"Yevhen\",\n    \"customerPhone\": \"55661122\",\n    \"comment\": \"testing\",\n    \"id\": 13579\n}"
+								},
+								{
+									"name": "Wrong status",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"status\": \"FINISH\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/orders/:id/status",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"orders",
+												":id",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "13579",
+													"description": "path id number"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Length",
+											"value": "15"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 06 Dec 2025 14:27:17 GMT"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										}
+									],
+									"cookie": [],
+									"body": "Incorrect query"
+								},
+								{
+									"name": "Wrong id",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"status\": \"ACCEPTED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseURL}}/orders/:id/status",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"orders",
+												":id",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "13500",
+													"description": "path id number"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Length",
+											"value": "57"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 06 Dec 2025 14:27:47 GMT"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										}
+									],
+									"cookie": [],
+									"body": "Can't set status ACCEPTED for order 13500 by courier 2864"
+								}
+							]
+						},
+						{
+							"name": "Assign courier by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/orders/:id/assign",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"orders",
+										":id",
+										"assign"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "string",
+											"description": "path id number"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Successful oepration",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/orders/:id/assign",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"orders",
+												":id",
+												"assign"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "13579",
+													"description": "path id number"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 06 Dec 2025 14:22:11 GMT"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"ACCEPTED\",\n    \"courierId\": 2864,\n    \"customerName\": \"Yevhen\",\n    \"customerPhone\": \"55661122\",\n    \"comment\": \"testing\",\n    \"id\": 13579\n}"
+								},
+								{
+									"name": "Invalid id nuber",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/orders/:id/assign",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"orders",
+												":id",
+												"assign"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "123",
+													"description": "path id number"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Latter in id",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/orders/:id/assign",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"orders",
+												":id",
+												"assign"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "string",
+													"description": "path id number"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 06 Dec 2025 14:23:04 GMT"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2025-12-06T14:23:04.547+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/orders/string/assign\"\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/orders/:id/assign",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"orders",
+												":id",
+												"assign"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "13579",
+													"description": "path id number"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get all available orders",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/orders/available",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"orders",
+								"available"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/orders/available",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"orders",
+										"available"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Dec 2025 14:02:13 GMT"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"status\": \"OPEN\",\n        \"courierId\": null,\n        \"customerName\": \"string\",\n        \"customerPhone\": \"string\",\n        \"comment\": \"string\",\n        \"id\": 13801\n    },\n    {\n        \"status\": \"OPEN\",\n        \"courierId\": null,\n        \"customerName\": \"Yevhen\",\n        \"customerPhone\": \"55661122\",\n        \"comment\": \"testing\",\n        \"id\": 13579\n    }\n]"
+						},
+						{
+							"name": "401 Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/orders/available",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"orders",
+										"available"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login courier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/login/courier",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"login",
+								"courier"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful operation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"yevhen\",\r\n  \"password\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/login/courier",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"login",
+										"courier"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ5ZXZoZW55dXIiLCJleHAiOjE3NjUwNDcxMjgsImlhdCI6MTc2NTAyOTEyOH0.SsJqpmaNr18IPJZp5kbiRBXVruIJhlk_6TnIlDDHZKFwMV_eA4SieQScp-MJ4fctqqkFIisfx4A1LeP197G7pA"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Content-Length",
+									"value": "179"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Dec 2025 13:52:08 GMT"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								}
+							],
+							"cookie": [],
+							"body": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ5ZXZoZW55dXIiLCJleHAiOjE3NjUwNDcxMjgsImlhdCI6MTc2NTAyOTEyOH0.SsJqpmaNr18IPJZp5kbiRBXVruIJhlk_6TnIlDDHZKFwMV_eA4SieQScp-MJ4fctqqkFIisfx4A1LeP197G7pA"
+						},
+						{
+							"name": "Invalid login and password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"12fff\",\r\n  \"password\": \"s1111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/login/courier",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"login",
+										"courier"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://backend.tallinn-learning.ee"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ5ZXZoZW55dXIiLCJleHAiOjE3NjUwNDcxMjgsImlhdCI6MTc2NTAyOTEyOH0.SsJqpmaNr18IPJZp5kbiRBXVruIJhlk_6TnIlDDHZKFwMV_eA4SieQScp-MJ4fctqqkFIisfx4A1LeP197G7pA"
+		}
+	]
+}

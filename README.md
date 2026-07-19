@@ -24,7 +24,7 @@ Want to add a new project or new tests? See [`CONTRIBUTING.md`](./CONTRIBUTING.m
 
 ## Raw API testing coursework
 
-The [`/postman`](./postman) folder holds the original Postman collection exports from my QA course (small, medium and large API testing exercises). Kept as-is as primary evidence; project #5 above documents the same skill set in the structured case-study format.
+The [`/postman`](./postman) folder holds Postman collection exports from my QA course (small, medium and large API testing exercises). Kept as-is as primary evidence; project #5 above documents the same skill set in the structured case-study format.
 
 ## Tools and skills used across projects
 
@@ -32,4 +32,4 @@ Manual, Functional, Regression, Smoke, Exploratory, Cross-browser testing. API t
 
 ## About me
 
-Manual QA Engineer based in Tallinn, Estonia. Full CV and live portfolio: **https://qa-por-3-1.vercel.app**
+Manual QA Engineer based in Tallinn, Estonia. Full CV and live portfolio: **https://qa-por-3-3.vercel.app/**
